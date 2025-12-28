@@ -39,7 +39,28 @@ if(password.length <6){
     return;
 }
 
+    // loading state
+loginInput.disabled = true;
+errorText.style.color = "blue";
+errorText.textContent = "Logging in...";
+
+//just fake backend
+setTimeout(function() {
+    if(email === "pavan@gmail.com" && password === "123456"){
+        errorText.style.color = "green";
+        errorText.textContent = "Login Successful ";
+
+        emailInput.value = "";
+        passwordInput.value = "";
+    } else {
+        errorText.style.color = "red";
+        errorText.textContent = "Invalid Login Credentials";
+    }
+    loginInput.disabled = false;
+}, 2000);
+
 //success for temporary
 errorText.style.color = "green"
 errorText.textContent = "Login data is good ";
 });
+
