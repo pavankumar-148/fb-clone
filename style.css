@@ -1,101 +1,241 @@
-body{
-    margin: 0px;
-    padding: 0px;
-   
-    
-    font-family: SFProDisplay-Regular,Helvetica,Arial, Helvetica, sans-serif,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.fb1{
-    
-    
-    margin-top: 150px;
-    margin-left: 260px;
-    text-overflow: ellipsis;
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+LEFT SECTION
+========================= */
+.fb1 {
+    max-width: 500px;
+    margin: 140px 0 0 260px;
+}
+
+.fb1 img {
+    height: 90px;
+}
+
+.p1 {
+    margin-top: 10px;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+/* =========================
+LOGIN CARD
+========================= */
+.sec2 {
     width: 400px;
-    align-items: center;
-    font-size: x-large ; 
-
-}
-.p1{
-    margin-left: 10px;
-    font-size: large;
-
-}
-
-.sec2{
-     
-        margin-left: 880px;
-        margin-right: 280px;
-     margin-top: -220px;
-  
-     border-radius: 10px;
-     box-shadow:
-        0 2px 4px rgba(120, 120, 120, 0.1),
-        0 8px 16px rgba(192, 191, 191, 0.697);
-    padding: 20px 20px;
-  
-  
-
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: 280px;
+    margin-top: -220px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.1),
+        0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-.login{
-    background-color: rgb(0, 110, 255);
-    font-size: large;
-    margin: 8px 0;
-    color: white;
-    padding: 15px;
+/* =========================
+FORM
+========================= */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    height: 48px;
+    font-size: 16px;
+    padding: 0 12px;
+    margin-bottom: 12px;
     border-radius: 6px;
-    width: 47vh;
-    text-overflow: clip;
-    border: 1px solid rgba(163, 161, 161, 0.626);
-    font-weight: bolder;
+    border: 1px solid #dddfe2;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1877f2;
+}
+
+/* =========================
+BUTTONS
+========================= */
+.login {
+    background-color: #1877f2;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
     cursor: pointer;
-
 }
-.create{
-    background-color: rgb(12, 237, 12);
-    font-size: large;
-    
-    color: white;
-    padding: 15px;
+
+.login:hover {
+    background-color: #166fe5;
+}
+
+.create {
+    background-color: #42b72a;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px;
+    margin: 20px auto 0;
+    width: 70%;
+    border: none;
     border-radius: 6px;
-     width: 35vh;
-     margin: 8px 40px;
-     border: 1px solid rgba(163, 161, 161, 0.626);
-     font-weight: bolder;
-     cursor: pointer;
+    cursor: pointer;
 }
-.inp1{
-    width: 47vh;
-}
-input{
-     height: 6vh;
-     width: 46vh;
-     margin: 8px 0;
-     border-radius: 6px;
-    border: 1px solid rgba(163, 161, 161, 0.626);
-}
-.para{
-    
-   margin-left: 910px;
-}
-.end {
-    border-top: 1px solid rgba(209, 206, 206, 0.673);
-    background-color: rgb(255, 255, 255);
-    margin-top: 50px;
-    font-size: small;
-    padding: 5px 260px;
-    color: grey;
-    justify-content: space-around;
 
+.create:hover {
+    background-color: #36a420;
 }
-a:hover{
-   text-decoration: underline ;
-  
-}
-a{
+
+/* =========================
+LINKS & ERROR
+========================= */
+a {
     text-decoration: none;
-    color: blue;
-    margin: 5px 95px;
+    color: #1877f2;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 12px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#error {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* =========================
+CENTER TEXT
+========================= */
+.para {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 14px;
+    max-width: 90%;
+}
+
+/* =========================
+FOOTER
+========================= */
+.end {
+    margin-top: auto;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    padding: 20px 260px;
+    font-size: 12px;
+    color: #737373;
+}
+
+.end p {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+    .fb1 {
+        margin: 80px auto 20px;
+        text-align: center;
+    }
+
+    .sec2 {
+        margin: 0 auto;
+    }
+
+    .end {
+        padding: 20px 40px;
+        text-align: center;
+    }
+}
+
+/* =========================
+MOBILE RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+    .fb1 {
+        margin: 40px auto 20px;
+    }
+
+    .fb1 img {
+        height: 70px;
+    }
+
+    .p1 {
+        font-size: 18px;
+    }
+
+    .sec2 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .create {
+        width: 100%;
+    }
+
+    .end {
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* =========================
+DARK MODE (AUTO)
+========================= */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #18191a;
+        color: #e4e6eb;
+    }
+
+    .sec2,
+    .end {
+        background-color: #242526;
+        box-shadow: none;
+        border-color: #3a3b3c;
+    }
+
+    input {
+        background-color: #3a3b3c;
+        color: #e4e6eb;
+        border: 1px solid #555;
+    }
+
+    a {
+        color: #4599ff;
+    }
+
+    .login {
+        background-color: #4599ff;
+    }
+
+    .create {
+        background-color: #3ba626;
+    }
 }
