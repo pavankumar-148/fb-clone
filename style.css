@@ -1,0 +1,101 @@
+body{
+    margin: 0px;
+    padding: 0px;
+   
+    
+    font-family: SFProDisplay-Regular,Helvetica,Arial, Helvetica, sans-serif,
+}
+
+.fb1{
+    
+    
+    margin-top: 150px;
+    margin-left: 260px;
+    text-overflow: ellipsis;
+    width: 400px;
+    align-items: center;
+    font-size: x-large ; 
+
+}
+.p1{
+    margin-left: 10px;
+    font-size: large;
+
+}
+
+.sec2{
+     
+        margin-left: 880px;
+        margin-right: 280px;
+     margin-top: -220px;
+  
+     border-radius: 10px;
+     box-shadow:
+        0 2px 4px rgba(120, 120, 120, 0.1),
+        0 8px 16px rgba(192, 191, 191, 0.697);
+    padding: 20px 20px;
+  
+  
+
+}
+
+.login{
+    background-color: rgb(0, 110, 255);
+    font-size: large;
+    margin: 8px 0;
+    color: white;
+    padding: 15px;
+    border-radius: 6px;
+    width: 47vh;
+    text-overflow: clip;
+    border: 1px solid rgba(163, 161, 161, 0.626);
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+.create{
+    background-color: rgb(12, 237, 12);
+    font-size: large;
+    
+    color: white;
+    padding: 15px;
+    border-radius: 6px;
+     width: 35vh;
+     margin: 8px 40px;
+     border: 1px solid rgba(163, 161, 161, 0.626);
+     font-weight: bolder;
+     cursor: pointer;
+}
+.inp1{
+    width: 47vh;
+}
+input{
+     height: 6vh;
+     width: 46vh;
+     margin: 8px 0;
+     border-radius: 6px;
+    border: 1px solid rgba(163, 161, 161, 0.626);
+}
+.para{
+    
+   margin-left: 910px;
+}
+.end {
+    border-top: 1px solid rgba(209, 206, 206, 0.673);
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    font-size: small;
+    padding: 5px 260px;
+    color: grey;
+    justify-content: space-around;
+
+}
+a:hover{
+   text-decoration: underline ;
+  
+}
+a{
+    text-decoration: none;
+    color: blue;
+    margin: 5px 95px;
+}
