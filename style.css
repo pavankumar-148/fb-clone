@@ -154,10 +154,45 @@ FOOTER
 .end p {
     margin-bottom: 8px;
 }
+/* Logout Button */
+.logout-btn {
+width: 100%;
+padding: 12px;
+margin-top: 12px;
+
+  background-color: #f02849; /* Facebook red */
+color: #fff;
+
+border: none;
+border-radius: 6px;
+
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+
+  display: none; /* controlled by JS */
+
+transition: background-color 0.3s ease,
+            transform 0.1s ease,
+            box-shadow 0.1s ease;
+}
+
+/* Hover effect */
+.logout-btn:hover {
+background-color: #d91f3a;
+}
+
+/* Click effect */
+.logout-btn:active {
+transform: scale(0.98);
+box-shadow: 0 2px 4px rgba(0,0,0,0.2) inset;
+}
 
 /* =========================
-   TABLET RESPONSIVE
+TABLET RESPONSIVE
 ========================= */
+
+
 @media (max-width: 1024px) {
     .fb1 {
         margin: 80px auto 20px;
@@ -177,6 +212,14 @@ FOOTER
 /* =========================
 MOBILE RESPONSIVE
 ========================= */
+
+@media (max-width: 480px) {
+  .logout-btn {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
 @media (max-width: 600px) {
     .fb1 {
         margin: 40px auto 20px;
