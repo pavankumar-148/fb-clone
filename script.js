@@ -3,6 +3,13 @@ const passwordInput = document.getElementById("password");
 const loginInput = document.getElementById("loginBtn");
 const errorText = document.getElementById("error");
 const loginForm = document.getElementById("loginForm");
+const logoutInput = document.getElementById("logoutBtn")
+
+if(localStorage.getItem("isLoggedIn") === true){
+    errorText.style.color = "green";
+    errorText.textContent = "Already Logged in";
+    logoutInput.style.display = "block";
+}
 
 loginForm.addEventListener("submit", function(event){
     event.preventDefault();
@@ -39,10 +46,12 @@ if(password.length <6){
     return;
 }
 
-    // loading state
+// loading state
 loginInput.disabled = true;
+loginInput.textContent = "Please wait..."
 errorText.style.color = "blue";
 errorText.textContent = "Logging in...";
+
 
 //just fake backend
 setTimeout(function() {
@@ -50,17 +59,23 @@ setTimeout(function() {
         errorText.style.color = "green";
         errorText.textContent = "Login Successful ";
 
-        emailInput.value = "";
-        passwordInput.value = "";
+        localStorage.setItem("isLoggedIn", "true");
+        localStorage.setItem("userEmail", email);
+
+        logoutInput.style.display = "block";
+
     } else {
         errorText.style.color = "red";
         errorText.textContent = "Invalid Login Credentials";
     }
     loginInput.disabled = false;
+    loginInput.textContent = "Login";
 }, 2000);
 
-//success for temporary
-errorText.style.color = "green"
-errorText.textContent = "Login data is good ";
+logoutInput.addEventListener("click", function(){
+    localStorage.clear();
+    errorText.style.color = "red";
+    errorText.textContent = "Logged out successfully";
+    logoutInput.style.display = "none";
 });
-
+});
