@@ -87,4 +87,3 @@ logoutInput.addEventListener("click", function(){
     logoutInput.style.display = "none";
 });
 });
-
