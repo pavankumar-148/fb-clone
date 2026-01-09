@@ -5,6 +5,7 @@ const errorText = document.getElementById("error");
 const loginForm = document.getElementById("loginForm");
 const logoutInput = document.getElementById("logoutBtn")
 
+
 if(localStorage.getItem("isLoggedIn") === true){
     errorText.style.color = "green";
     errorText.textContent = "Already Logged in";
@@ -62,10 +63,16 @@ setTimeout(function() {
         localStorage.setItem("isLoggedIn", "true");
         localStorage.setItem("userEmail", email);
 
+        
+        errorText.textContent = "Login successful ✔️";
         logoutInput.style.display = "block";
+    setTimeout(function () {
+        window.location.href = "home.html";
+    }, 1000);
+
 
     } else {
-        errorText.style.color = "red";
+        errorText.classList.remove("error");
         errorText.textContent = "Invalid Login Credentials";
     }
     loginInput.disabled = false;
