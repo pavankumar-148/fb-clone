@@ -50,7 +50,7 @@ if(password.length <6){
 // loading state
 loginInput.disabled = true;
 loginInput.textContent = "Please wait..."
-errorText.style.color = "blue";
+errorText.style.color = "yellow";
 errorText.textContent = "Logging in...";
 
 
@@ -73,6 +73,7 @@ setTimeout(function() {
 
     } else {
         errorText.classList.remove("error");
+        errorText.style.color = "red";
         errorText.textContent = "Invalid Login Credentials";
     }
     loginInput.disabled = false;
@@ -86,3 +87,4 @@ logoutInput.addEventListener("click", function(){
     logoutInput.style.display = "none";
 });
 });
+
