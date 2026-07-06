@@ -23,7 +23,7 @@ errorText.innerText = "";
 //validation 
 
 if(email === "" || password === ""){
-    errorText.textContent = "Email and Password are required"
+    errorText.textContent = "Email and Password are required default = pavan@gmail.com"
     return;
 }
 
